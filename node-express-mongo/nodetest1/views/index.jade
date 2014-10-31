@@ -1,0 +1,15 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+
+  h2 Sitemap
+  ul
+    li
+      a(href="helloworld")= "Hello World"
+    li
+      a(href="userlist")= "User List "
+      in Mongo.nodetest1
+    li
+      a(href="newuser")= "Add New User"

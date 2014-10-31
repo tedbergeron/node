@@ -1,5 +1,7 @@
 # ignore node modules, just install them as needed
 /RESTapi/node_modules
+/node-express-mongo/nodetest1/node_modules
+/node-express-mongo/nodetest2/node_modules
 
 # Windows image file caches
 Thumbs.db
