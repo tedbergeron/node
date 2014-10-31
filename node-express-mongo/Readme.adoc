@@ -1,0 +1,44 @@
+= Readme
+
+Code in this repo is for this fantastic tutorial on using node express and MongoDB.
+
+* http://cwbuecheler.com/web/tutorials/2013/node-express-mongo/
+* http://cwbuecheler.com/web/tutorials/2014/restful-web-app-node-express-mongodb/
+
+
+== MongoDB
+
+In these tutorials the author has you create a /data directory to store the Mongo data.
+
+=== Run MongoD and Mongo
+
+At the command prompt:
+
+ $ cd \Program Files\MongoDB 2.6 Standard\bin\
+ $ mongod --dbpath c:\node\nodetest1\data
+
+Once it says `[initandlisten] waiting for connections on port 27017`, you're good.
+
+IMPORTANT: You need to keep this command window open to keep MongoDB daemon running. If you close it down, our website won't be able to connect to a database.
+
+In a separate command window connect to database:
+
+ $ cd \Program Files\MongoDB 2.6 Standard\bin\
+ $ mongo
+
+Once you see `connecting to: test` it is ready.
+
+Here you can switch to a different collection, or add records.
+
+Our database is located at *localhost:27017/nodetest1*
+
+TIP: You can close this window when you are done.
+
+
+== Mongo useful commands
+
+In the Mongo command window
+
+* `use nodetest1` to switch from test to nodetest1 colleciton
+* `db.usercollection.insert({ "username" : "testuser1", "email" : "testuser1@example.com" })` to add a record
+* `db.usercollection.find().pretty()` to get a list of all records in collection
